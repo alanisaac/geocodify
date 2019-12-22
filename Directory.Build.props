@@ -1,0 +1,27 @@
+<Project>
+  <PropertyGroup>
+    <Copyright>© Geodata authors, all rights reserved.</Copyright>
+    <Version>0.0.1</Version>
+    <PackageProjectUrl>https://github.com/alanisaac/geodata</PackageProjectUrl>
+    <IsSourceProject>$(MSBuildProjectDirectory.Contains('\src'))</IsSourceProject>
+    <IsTestProject>$(MSBuildProjectDirectory.Contains('\tests'))</IsTestProject>
+    <GenerateDocumentationFile>$(IsSourceProject)</GenerateDocumentationFile>
+    <IsPackable>$(IsSourceProject)</IsPackable>
+    <GeneratePackageOnBuild>$(IsSourceProject)</GeneratePackageOnBuild>
+    <CodeAnalysisRuleset>$(MSBuildThisFileDirectory)code-analysis.ruleset</CodeAnalysisRuleset>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup Condition="$(IsSourceProject) ">
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>$(MSBuildProjectName).Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+</Project>
