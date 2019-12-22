@@ -76,5 +76,14 @@ namespace Geodata.Tests
 
             Assert.Equal(coordinates1, coordinates2);
         }
+
+        [Fact]
+        public void CoordinatesWithSameLongitudeAndLatitude_ReturnSameHashCode()
+        {
+            var coordinates1 = new Coordinates(5.1, 10.5);
+            var coordinates2 = new Coordinates(5.1, 10.5);
+
+            Assert.Equal(coordinates1.GetHashCode(), coordinates2.GetHashCode());
+        }
     }
 }
