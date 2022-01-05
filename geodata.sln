@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".root", ".root", "{CEFD822B-2E95-4F3D-B324-130BFC6DE5E6}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		appveyor.yml = appveyor.yml
 		code-analysis.ruleset = code-analysis.ruleset
 		Directory.Build.props = Directory.Build.props
 		LICENSE = LICENSE
@@ -17,9 +18,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".root", ".root", "{CEFD822B
 		stylecop.json = stylecop.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geodata", "src\Geodata\Geodata.csproj", "{EBA497BE-5C3F-4FA8-B017-8054EC7A95FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geodata", "src\Geodata\Geodata.csproj", "{EBA497BE-5C3F-4FA8-B017-8054EC7A95FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geodata.Tests", "test\Geodata.Tests\Geodata.Tests.csproj", "{85742B2D-69DD-4159-8C10-77081B9D1D40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geodata.Tests", "test\Geodata.Tests\Geodata.Tests.csproj", "{85742B2D-69DD-4159-8C10-77081B9D1D40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
