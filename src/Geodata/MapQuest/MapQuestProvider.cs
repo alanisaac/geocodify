@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Flurl;
 using Flurl.Http;
-using Flurl.Http.Configuration;
 using Geodata.Utilities;
 
 namespace Geodata.MapQuest
