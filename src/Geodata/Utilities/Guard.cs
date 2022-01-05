@@ -40,5 +40,20 @@ namespace Geodata.Utilities
                 throw new ArgumentException("Value must be a valid number.", argumentName);
             }
         }
+
+        /// <summary>
+        /// Throws an exception if the specified value is null or whitespace.
+        /// </summary>
+        /// <param name="argumentValue">The argument value.</param>
+        /// <param name="argumentName">Name of the argument.</param>
+        /// <exception cref="ArgumentException">Value cannot be null or whitespace.</exception>
+        [DebuggerHidden]
+        public static void ArgumentNotNullOrWhitespace(string argumentValue, [InvokerParameterName] string argumentName)
+        {
+            if (string.IsNullOrWhiteSpace(argumentValue))
+            {
+                throw new ArgumentException("Value cannot be null or whitespace.", argumentName);
+            }
+        }
     }
 }
